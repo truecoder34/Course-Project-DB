@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Sport Organizations</title>
+  <title>Coaches List</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -70,19 +70,7 @@
     <div class="row">
       <ul class="nav nav-tabs">
         <li class="active">
-          <a href="/sport_org" data-toggle="tab">Все <span class = "badge"> <%= res.length %> </span></a>
-        </li>
-        <li>
-          <a href="#fitness" data-toggle="tab">Фитнесс <span class = "badge"> 2 </span></a>
-        </li>
-        <li>
-          <a href="#football" data-toggle="tab">Футбол <span class = "badge"> 0 </span></a>
-        </li>
-        <li>
-          <a href="#hockey" data-toggle="tab">Хоккей <span class = "badge"> 1 </span></a>
-        </li>
-        <li>
-          <a href="#combat" data-toggle="tab">Единоборства <span class = "badge"> 1 </span></a>
+          <a href="/coaches" data-toggle="tab">Тренера <span class = "badge"> <%= res.length %> </span></a>
         </li>
       </ul>
       <br>
@@ -92,24 +80,24 @@
             <div class="thumbnail">
               <img src="http://placehold.it/400x240" alt="">
               <div class="caption">
-                <h3><a href="#"><%= res[i].name_SO %></a></h3>
+                <h3><%= res[i].fio_of_coach %></h3>
                 <p><strong>Вид спорта: </strong>
-                  <%= res[i].sport_type %>
+                  <%= res[i].sport_spec %>
                 </p>
-                <p><strong>Адресс: </strong>
-                  <%= res[i].adress_SO %>
+                <p><strong>Опыт: </strong>
+                  <%= res[i].experience %>
                 </p>
-                <p><strong>Количество членов организации: </strong>
-                  <%= res[i].quantity_of_members %>
+                <p><strong>Звание тренера: </strong>
+                  <%= res[i].title_of_coach %>
                 </p>
-                <p><strong>Количество секций: </strong>
-                  <%= res[i].quantity_of_sections %>
+                <p><strong>Возраст тренера: </strong>
+                  <%= res[i].age_of_coach %>
                 </p>
-                <p><strong>Количество групп: </strong>
-                  <%= res[i].quantity_of_groups %>
+                <p><strong>Лет в спорте: </strong>
+                  <%= res[i].quantity_of_years_in_sport %>
                 </p>
-                <p><strong>Тип финансирования: </strong>
-                  <%= res[i].financ_type %>
+                <p><strong>Имя СО: </strong>
+                  <%= res[i].name_SO %>
                 </p>
                 <p><strong>Номер организации: </strong>
                   <%= res[i].number_SO %>

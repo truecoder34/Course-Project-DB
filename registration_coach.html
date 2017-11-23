@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>SO registration</title>
+  <title>Coach registration</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -73,43 +73,51 @@
       <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-          <h2>Регистрация спортивной организации</h2>
+          <h2>Регистрация тренера</h2>
           <hr>
-          <p class = "explanation">Здесь вы можете зарегистрировать спортивную организацию заполнив просутю форму:</p>
+          <p class = "explanation">Здесь вы можете зарегистрировать себя, в роли тренера:</p>
           <p class = "primechanie"> * Все поля обязательны для заполнения.</p>
-          <br>
-          <form action="/sand_info_about_SO" method="post" name="test_form">
+          <!-- <br> -->
+          <form action="/sand_info_about_coach" method="post" name="test_form">
             <div class="form-group">
-              <label class = "form_labels" for="input_name">Название спортивной организации:</label>
-              <input type="text" name="input_name" class="form-control" id="input_name" placeholder="Enter name">
+              <label class = "form_labels" for="input_first_name">Имя:</label>
+              <input type="text" name="input_first_name" class="form-control" id="input_first_name" placeholder="Имя...">
             </div>
             <div class="form-group">
-              <label  class = "form_labels" for="input_number">Регистрационный номер:</label>
-              <input type="text" name="input_number" class="form-control" id="input_number" placeholder="Enter registration number">
+              <label  class = "form_labels" for="input_surname">Фамилия:</label>
+              <input type="text" name="input_surname" class="form-control" id="input_surname" placeholder="Фамилия...">
             </div>
             <div class="form-group">
-              <label class = "form_labels" for="input_adress">Адресс спортивной организации:</label>
-              <input type="text" name="input_adress" class="form-control" id="input_adress" placeholder="Enter adress">
+              <label class = "form_labels" for="input_second_name">Отчество:</label>
+              <input type="text" name="input_second_name" class="form-control" id="input_second_name" placeholder="Отчество...">
             </div>
             <div class="form-group">
-              <label class = "form_labels" for="input_quantity_of_mem">Количество членов в спортивной организации:</label>
-              <input type="text" name="input_quantity_of_mem" class="form-control" id="input_quantity_of_mem" placeholder="Enter quantity of members">
+              <label class = "form_labels" for="input_age">Возраст:</label>
+              <input type="text" name="input_age" class="form-control" id="input_age" placeholder="Возраст...">
             </div>
             <div class="form-group">
-              <label  class = "form_labels" for="input_quantity_of_sec">Количество секций:</label>
-              <input  type="text" name="input_quantity_of_sec" class="form-control" id="input_quantity_of_sec" placeholder="Enter quantity of sections">
+              <label class = "form_labels" for="input_sport_type">Вид спорта:</label>
+              <input type="text" name="input_sport_type" class="form-control" id="input_sport_type" placeholder="Вид спорта...">
             </div>
             <div class="form-group">
-              <label class = "form_labels" for="input_quantity_of_sg">Количество споривных групп:</label>
-              <input type="text" name="input_quantity_of_sg" class="form-control" id="input_quantity_of_sg" placeholder="Enter quantity of sport groups">
+              <label  class = "form_labels" for="input_exp">Опыт тренерской работы:</label>
+              <input  type="text" name="input_exp" class="form-control" id="input_exp" placeholder="Опыт тренерской работы...">
             </div>
             <div class="form-group">
-              <label class = "form_labels" for="input_fin_type">Тип финансирования:</label>
-              <input type="text" name="input_fin_type" class="form-control" id="input_fin_type" placeholder="Enter financing type">
+              <label class = "form_labels" for="input_rang">Спортивное звание:</label>
+              <input type="text" name="input_rang" class="form-control" id="input_rang" placeholder="Спортивное звание...">
             </div>
             <div class="form-group">
-              <label class = "form_labels" for="input_fin_type">Вид спорта:</label>
-              <input type="text" name="sport_type" class="form-control" id="input_sport_type" placeholder="Enter sport type">
+              <label class = "form_labels" for="input_years">Лет в спорте:</label>
+              <input type="text" name="input_years" class="form-control" id="input_years" placeholder="Количество лет в спорте...">
+            </div>
+            <!-- <div class="form-group">
+              <label class = "form_labels" for="input_name_so">Название СО:</label>
+              <input type="text" name="input_name_so" class="form-control" id="input_name_so" placeholder="Название спортивной организации...">
+            </div> -->
+            <div class="form-group">
+              <label class = "form_labels" for="input_number_so">Номер СО:</label>
+              <input type="text" name="input_number_so" class="form-control" id="input_number_so" placeholder="Номер спортивной организации...">
             </div>
             <button type="submit" class="btn btn-success btn-lg">Добавить</button>
             <button type="reset" class="btn btn-danger btn-lg">Очистить поля</button>

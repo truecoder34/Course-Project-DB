@@ -12,7 +12,7 @@ body{
 }
 
 hr {
-    border-top: 2px solid #8B6C62;
+    border-top: 2px solid black;
 }
 
 /*стили панели навигации*/
@@ -65,4 +65,17 @@ body > header > .container-fluid > .row > #navigation{
 #carousel{
 	height:290px;
 	width:500px;
+}
+
+.explanation{
+  font-size: 20px;
+}
+
+.primechanie{
+  color: blue;
+  font-size: 13px;
+}
+
+.form_labels{
+  font-size: 15px;
 }
