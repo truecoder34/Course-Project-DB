@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Coaches List</title>
+  <title>Coach registration</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -43,6 +43,8 @@
             <li id="schedule"><a href="/schedule">Расписание</a></li>
             <li id="so_reg"><a href="/so_reg">Регистрация СО</a></li>
             <li id="coach_reg"><a href="/coach_reg">Регистрация Тренера</a></li>
+
+
             <!-- <li id="for_coaches"><a href="/for_coaches">Тренерам</a></li>
                 <li id="for_stuff"><a href="/for_stuff">Обслуживающему персоналу</a></li> -->
           </ul>
@@ -62,55 +64,52 @@
         </div>
       </div>
     </div>
+
   </header>
 
   <br>
 
-  <div class="container">
+
+  <div class="container-fluid">
     <div class="row">
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a href="/coaches" data-toggle="tab">Тренера <span class = "badge"> <%= res.length %> </span></a>
-        </li>
-      </ul>
-      <br>
-      <div  class="tab-content">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <h3>Список спортивных залов</h3>
+        <hr>
         <% for(var i=0; i < res.length; i++) { %>
           <div class="col-xs-6 col-sm-4">
             <div class="thumbnail">
               <img src="http://placehold.it/400x240" alt="">
               <div class="caption">
-                <h3><%= res[i].fio_of_coach %></h3>
-                <p><strong>Вид спорта: </strong>
-                  <%= res[i].sport_spec %>
-                </p>
-                <p><strong>Опыт: </strong>
-                  <%= res[i].experience %>
-                </p>
-                <p><strong>Звание тренера: </strong>
-                  <%= res[i].title_of_coach %>
-                </p>
-                <p><strong>Возраст тренера: </strong>
-                  <%= res[i].age_of_coach %>
-                </p>
-                <p><strong>Лет в спорте: </strong>
-                  <%= res[i].quantity_of_years_in_sport %>
-                </p>
-                <p><strong>Имя СО: </strong>
+                <h3><%= res[i].name_of_SG %></h3>
+                <p><strong>Название CO: </strong>
                   <%= res[i].name_SO %>
                 </p>
-                <p><strong>Номер организации: </strong>
+                <p><strong>Номер CO: </strong>
                   <%= res[i].number_SO %>
                 </p>
+                <p><strong>Тип спорт зала: </strong>
+                  <%= res[i].type_of_SG %>
+                </p>
+                <p><strong>Вид спорта: </strong>
+                  <%= res[i].kind_of_sport %>
+                </p>
+                <p><strong>Район: </strong>
+                  <%= res[i].district %>
+                </p>
+                <p><strong>Адрес спорт зала: </strong>
+                  <%= res[i].address_of_SG %>
+                </p>
+
                 <!-- <a href="#" class="btn btn-success">Подробнее... <i class="fa fa-arrow-right"></i></a> -->
               </div>
             </div>
           </div>
           <% } %>
+        </table>
       </div>
+      <div class="col-sm-2"></div>
     </div>
-  </div>
-
 
 </body>
 

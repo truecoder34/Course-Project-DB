@@ -62,6 +62,25 @@ app.get("/coach_reg", function(req, res) {
   res.sendFile(__dirname + "/registration_coach.html");
 })
 
+app.get("/schedule", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  con.query("SELECT tr_schedule.`id`, tr_schedule.`number_SO`, sport_organization.`name_SO`, `date`, `time`, `code_number_SE` FROM `tr_schedule`\
+    INNER JOIN sport_organization ON tr_schedule.`number_SO` = sport_organization.`number_SO`;", function(err, result, fields) {
+     if (err) {
+       console.log("ERROR: Notes from 'tr_schedule' table  DOESN'T SELECTED - ERROR");
+       answer = "ERROR";
+       // res.send(answer);
+     } else {
+       console.log("Success: Notes from 'tr_schedule' table SELECTED - DONE");
+       res.render('schedule', {
+         res:result
+       })
+       console.log("Success: Notes from 'tr_schedule' table SENT - DONE");
+       // res.send(answer); // отправляем все данные из таблицы
+     }
+   });
+})
+
 // Вывести все спортивные организации
 app.get("/sport_org", function(req, res) {
    res.setHeader("Content-Type", "text/html");
@@ -98,6 +117,26 @@ app.get("/coaches", function(req, res) {
           res:result
         })
         console.log("Success: Notes from 'coaches' table SENT - DONE");
+        // res.send(answer); // отправляем все данные из таблицы
+      }
+    });
+})
+
+// Вывести все спорт залы
+app.get("/sport_gyms", function(req, res) {
+   res.setHeader("Content-Type", "text/html");
+   con.query("SELECT  sport_gym.`number_SO`, `kind_of_sport`, `district`, `name_of_SG`, `type_of_SG`, `address_of_SG`, sport_organization.`name_SO`\
+    FROM `sport_gym` INNER JOIN  sport_organization ON sport_gym.number_SO = sport_organization.number_SO; ", function(err, result, fields) {
+      if (err) {
+        console.log("ERROR: Notes from 'sport_gyms' table  DOESN'T SELECTED - ERROR");
+        answer = "ERROR";
+        // res.send(answer);
+      } else {
+        console.log("Success: Notes from 'sport_gyms' table SELECTED - DONE");
+        res.render('sport_gyms', {
+          res:result
+        })
+        console.log("Success: Notes from 'sport_gyms' table SENT - DONE");
         // res.send(answer); // отправляем все данные из таблицы
       }
     });
@@ -144,27 +183,6 @@ app.post("/sand_info_about_coach", function(req, res) {
   res.sendFile(__dirname + "/registration_SO.html");
 })
 
-//Вывести по виду спорта ФИТНЕСС
-// app.get("/fitness", function(req, res) {
-//    res.setHeader("Content-Type", "text/html");
-//    con.query("SELECT sport_organization.id,  `name_SO` , sport_organization.number_SO,  `adress_SO` ,  `quantity_of_members` ,\
-//      `quantity_of_sections` ,  `quantity_of_groups` ,  `financ_type` , connect_so_st.sport_type FROM sport_organization INNER \
-//     JOIN connect_so_st ON sport_organization.number_SO = connect_so_st.number_SO WHERE connect_so_st.sport_type =  'Фитнес';",
-//    function(err, result, fields) {
-//       if (err) {
-//         console.log("fitness sport type SELECT - ERROR");
-//         answer = "ERROR";
-//         // res.send(answer);
-//       } else {
-//         console.log("fitness sport type SELECT - OK");
-//         res.render('fitness', {
-//           res:result
-//         })
-//         console.log("fitness sport type SEND ok");
-//         // res.send(answer); // отправляем все данные из таблицы
-//       }
-//     });
-// })
 
 
 
