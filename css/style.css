@@ -1,0 +1,68 @@
+header{
+  text-align: center;
+  background-color: #222;
+}
+
+.workField{
+  text-align: center;
+}
+
+body{
+  background-color: white;
+}
+
+hr {
+    border-top: 2px solid #8B6C62;
+}
+
+/*стили панели навигации*/
+#navigation{
+  background-color: #222;
+  border-style: solid  ! important;
+  border-width: 2px 0px 2px 0px ! important;
+  border-color: #EBE6FF ! important;
+  margin-bottom: 0px;
+}
+
+body > header > .container-fluid > .row > #navigation{
+
+
+}
+
+/*Цвет элементов навигации*/
+.navbar-default .navbar-nav > li > a {
+    color:#9d9d9d;
+    /*#7a2525*/
+    font-size: 15px;
+    /*font-weight: bold;*/
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color:white;
+    /*#7a2525*/
+    font-size: 15px;
+    /*font-weight: bold;*/
+}
+
+/*отступы между пугктами навигационного меню*/
+.navbar-nav > li > a {
+  padding: 15px 10px 15px 10px;
+}
+
+/*.navbar-brand{
+  padding: 15px 10px 15px 10px;
+
+}*/
+.panel-title{
+  font-size: 30px;
+  text-align: center;
+}
+
+.panel-body>ul{
+  font-size: 17px;
+}
+
+#carousel{
+	height:290px;
+	width:500px;
+}

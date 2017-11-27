@@ -1,0 +1,64 @@
+body{
+  background-image: url(../images/nba.jpg);
+}
+/*Вкладка авторизации*/
+.btn-success {
+  transition: 0.5s;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background: green;
+  border-color: #5cb85c;
+  color: black;
+  transition: all 0.4s;
+}
+
+.input-group-addon {
+  background-color: #5cb85c;
+  /*#5cb85c*/
+  color: white;
+}
+/*Конец*/
+
+/*Вкладка регистрации*/
+.btn-warning {
+  transition: 0.5s;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+  background: orange;
+  color: black;
+  border-color: #f0ad4e;
+}
+
+.iga1 {
+  background-color: #f0ad4e;
+  /**/
+  color: white;
+}
+/*Конец*/
+
+.panel.with-nav-tabs .nav-tabs {
+  border-bottom: none;
+}
+
+.panel.with-nav-tabs .nav-justified {
+  margin-bottom: -4px;
+}
+
+.panel {
+  margin: 7%;
+}
+
+/*Всплывающее окно восстановления пароля*/
+.modal-header {
+  background: #FF3838;
+  color: white;
+  text-align: center;
+}
+
+.iga2 {
+  background-color: #FF3838;
+  color: white;
+}
+/*Конец*/

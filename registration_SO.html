@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Main Page</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header>
+    <div class="navbar navbar-default navbar-static-top" id="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                    <span class = "sr-only">Открыть навигацию</span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+                    <span class = "icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="fa fa-server fa-lg" aria-hidden="true"></i> </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="responsive-menu">
+          <ul class="nav navbar-nav">
+            <li id="main_page"><a href="/main_page">Главная</a></li>
+            <li id="sport_org"><a href="/sport_org">Спортивные организации</a></li>
+            <li id="schedule"><a href="/schedule">Расписание</a></li>
+            <li id="so_reg"><a href="/so_reg">Регистрация СО</a></li>
+            <li id="mess_board"><a href="/mess_board">Объявления</a></li>
+            <li id="mess_board"><a href="/coaches">Тренера</a></li>
+            <!-- <li id="for_coaches"><a href="/for_coaches">Тренерам</a></li>
+                <li id="for_stuff"><a href="/for_stuff">Обслуживающему персоналу</a></li> -->
+          </ul>
+
+          <form class="navbar-form navbar-right" action="">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="E-mail" value="">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Пароль" value="">
+            </div>
+
+            <button type="submit" name="button" class="btn btn-primary">
+            <i class="fa fa-sign-in"></i> ВОЙТИ
+          </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <br>
+  <br>
+
+  <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8">
+          <form action="/sand_info_about_SO" method="post" name="test_form">
+
+            <div class="form-group">
+              <label for="input_name">Name of sport organization:</label>
+              <input type="text" name="input_name" class="form-control" id="input_name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="input_number">Registration number:</label>
+              <input type="text" name="input_number" class="form-control" id="input_number" placeholder="Enter registration number">
+            </div>
+            <div class="form-group">
+              <label for="input_adress">Adress:</label>
+              <input type="text" name="input_adress" class="form-control" id="input_adress" placeholder="Enter adress">
+            </div>
+            <div class="form-group">
+              <label for="input_quantity_of_mem">Quantity of members:</label>
+              <input type="text" name="input_quantity_of_mem" class="form-control" id="input_quantity_of_mem" placeholder="Enter quantity of members">
+            </div>
+            <div class="form-group">
+              <label for="input_quantity_of_sec">Quantity of sections:</label>
+              <input type="text" name="input_quantity_of_sec" class="form-control" id="input_quantity_of_sec" placeholder="Enter quantity of sections">
+            </div>
+            <div class="form-group">
+              <label for="input_quantity_of_sg">Quantity of sport groups:</label>
+              <input type="text" name="input_quantity_of_sg" class="form-control" id="input_quantity_of_sg" placeholder="Enter quantity of sport groups">
+            </div>
+            <div class="form-group">
+              <label for="input_fin_type">Financing type:</label>
+              <input type="text" name="input_fin_type" class="form-control" id="input_fin_type" placeholder="Enter financing type">
+            </div>
+            <div class="form-group">
+              <label for="input_fin_type">Sport type:</label>
+              <input type="text" name="sport_type" class="form-control" id="input_sport_type" placeholder="Enter sport type">
+            </div>
+
+            <button type="submit" class="btn btn-success btn-lg">Post Data</button>
+            <button type="reset" class="btn btn-danger btn-lg">Clear fields</button>
+          </form>
+
+        </div>
+
+        <div class="col-sm-2"></div>
+
+      </div>
+
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>
